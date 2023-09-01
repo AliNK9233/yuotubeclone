@@ -1,44 +1,59 @@
 body{
-    background-color: #0f0f0f;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:black;
 }
 
 /* header */
 
-.logoarea {
-    display: flex;
-    padding: 20px;
-    align-items: center;
+.header{
+    background-color:black;
+    height: 56px;
 }
 
-.logoarea p {
-    margin: 0;
-    letter-spacing: -1.5px;
-    font-weight: 700;
-}
 
-.ytlogo {
-    margin-left: 5px;
-    margin-right: 5px;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-image: url('./images/youtube-icon-flat-red-play-button-logo-vector.png');
+.logo{
+    background-image: url(/images/onlylogo.png);
+    width: 20px;
+    height: 17px;
     background-size: cover;
+    margin-left: 20px;
+    margin-right: 2px;
+    margin-bottom: 3px;
+}
+.logo1{
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 56px;
+    
+
+}
+.logo1 i{
+    margin-left: 15px;
 }
 
-.header {
+.Ytname{
+
+    width: 0%;
+    letter-spacing: -2px;
+}
+@media (max-width: 376px) {
+    .Ytname,.searchbar,.mic.custom-mic,.signin1,.idot{
+        display: none;
+      
+    }
+    .searchbutton.custom-search-button{
+        background: none;
+        
+    }
+
+  }
+
+.nav_search{
     display: flex;
-    color: white;
     align-items: center;
     height: 56px;
-    justify-content: space-between;
-    background-color: #202020;
-    margin-bottom: 8px;
 }
-
-.searchbar {
-    width: 100%; /* Set the width to 100% to take available space */
+.searchbar{
     border: 1px solid #383838;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
@@ -47,13 +62,8 @@ body{
     background-color: #0f0f0f;
     color: white;
     height: 40px;
+    width: 100%;
 }
-
-.search {
-    display: flex;
-    align-items: center;
-}
-
 .searchbutton {
     border-radius: 0 40px 40px 0;
     cursor: pointer;
@@ -67,7 +77,7 @@ body{
 .mic {
     border: none;
     cursor: pointer;
-    width: 51px;
+    width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -75,16 +85,23 @@ body{
     background-color: #383838;
     border-radius: 50%;
     margin-left: 10px;
+    
 }
 
-
-.option {
+.mic i{
+    margin-bottom: 3px;
+}
+.nav_signin{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    height: 56px;
+    
 }
-
-.signin {
+.nav_signin1{
+    display: flex;
+    align-items: center;
+    color: white;
     color: rgb(0, 0, 255);
     border-radius: 40px;
     margin-left: 10px;
@@ -92,14 +109,29 @@ body{
     border: none;
     width: 97px;
     height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     border: 1px solid #393a3a;
+    
+}
+.nav_signin i{
+    margin-left: 15px;
+}
+.signin1{
+    margin-left: 10px;
 }
 
+/* header */
 
-/* side menu */
+.category{
+    background-color: #000000;
+    height: 40px;
+}
+
+/* sidemenu */
+.sidemenu{
+    padding-top: 10px;
+    background-color: rgb(0, 0, 0);
+    height: auto;
+}
 
 a {
     color: white;
@@ -115,38 +147,47 @@ a {
 ul {
     list-style-type: none;
 }
-li a i {
-    margin-right: 8px; 
-}
-.atext {
-    display: inline; 
+.menu-list1{
+    color: white;
 }
 
-@media (max-width: 500px) {
-    .atext {
-        display: none; 
-    }
-    .side-menu1 hr{
-        display: none;
-    }
-    .side-menu1{
-        width: 3rem;
-    }
-}
-
-@media (max-width:768px){
-    .logoword, .hideheader{
-        display: none;
-    }
-    .searchbutton{
-        border-radius: 40%;
-    }
+.nav_signin2{
+    display: flex;
+    align-items: center;
+    color: white;
+    color: rgb(0, 0, 255);
+    border-radius: 40px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    width: 97px;
+    height: 35px;
+    border: 1px solid #393a3a;
     
 }
+.nav_signin2 i{
+    margin-left: 15px;
+}
+.signin2{
+    margin-left: 10px;
+}
+
+@media (max-width:800px){
+    .sidemenu{
+        display: none;
+    }
+}
+
+/* sidemenu */
 
 
+/* vedioarea */
 
-/* main body */
+
+.vedio_cards{
+    background-color: black;
+}
+
 
 .video-card {
     padding: 10px;
@@ -205,22 +246,5 @@ li a i {
     color: #ccc;
     padding-left: 10px;
 }
-.bodydiv{
-    display: flex;
-}
-.shorts-card{
-    padding: 10px;
-    margin: 10px;
-    box-shadow: 0 2px 4px rgb(232 209 209 / 10%);
-    border-radius: 10px;
 
-}
-
-.shorts-thumbnail img {
-    width: 70%;
-    height: auto;
-}
-
-
-
-
+/* vedioarea */
